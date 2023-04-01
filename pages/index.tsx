@@ -8,7 +8,7 @@ import useMovieList from "@/hooks/useMovies";
 import { NextPageContext } from "next";
 import { getSession, signOut } from "next-auth/react";
 
-export async function getStaticSideProps(context: NextPageContext) {
+export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
 
   if (!session) {

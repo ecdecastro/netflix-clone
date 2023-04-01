@@ -3,7 +3,7 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
-export async function getStaticSideProps(context: NextPageContext) {
+export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
 
   if (!session) {
